@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="assets/logo.png" width="250">
+  <img src="assets/logo.jpg" width="250">
 </p>
 
 # skewtpy
