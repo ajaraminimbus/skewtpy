@@ -44,9 +44,9 @@ Installation instructions will be provided once the first functional release is 
 
 ## 👤 Author
 
-Alejandro Jaramillo-Moreno
-Instituto de Ciencias de la Atmósfera y Cambio Climático
-Universidad Nacional Autónoma de México
+Alejandro Jaramillo-Moreno  
+Instituto de Ciencias de la Atmósfera y Cambio Climático  
+Universidad Nacional Autónoma de México  
 
 Created and maintained independently.
 
