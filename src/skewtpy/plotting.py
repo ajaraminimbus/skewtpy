@@ -25,7 +25,7 @@ def skew_transform(Tc, p_hPa, skew=-40):
     return Tc + skew * np.log(p_hPa)
 
 
-def plot_skewt_logp(T, Td, p, xlim_C=None, pmin=100, lang='en', skew=-40):
+def plot_skewt_logp(T, Td, p, xlim_C=None, pmin=100, p_ref = 1025, lang='en', skew=-40):
     """
     Plot a simplified Skew-T log-p diagram with professional styling.
 
@@ -84,7 +84,7 @@ def plot_skewt_logp(T, Td, p, xlim_C=None, pmin=100, lang='en', skew=-40):
 
     # --- Background isotherms ---
     T0s = np.arange(-200, 80, 10)
-    p_grid = np.linspace(1010, 50, 200)
+    p_grid = np.linspace(p_ref, 50, 200)
 
     for T0 in T0s:
         x_line = skew_transform(T0 * np.ones_like(p_grid), p_grid, skew=skew)
@@ -100,7 +100,7 @@ def plot_skewt_logp(T, Td, p, xlim_C=None, pmin=100, lang='en', skew=-40):
     ax.plot(x0, p_grid, color="0.2", linewidth=1.6, alpha=0.6, zorder=1)
 
     # --- X-axis labeling referenced to surface pressure ---
-    p_ref = 1025
+    
     x_ticks = skew_transform(T0s, p_ref * np.ones_like(T0s), skew=skew)
     ax.set_xticks(x_ticks)
     ax.set_xticklabels([f"{t:d}" for t in T0s])
